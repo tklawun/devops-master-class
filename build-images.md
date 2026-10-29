@@ -1,4 +1,4 @@
-## Use Images supporting multiple architectures - linux/amd64,linux/arm64
+# Use Images supporting multiple architectures - linux/amd64,linux/arm64
 
 ```
 FROM maven:3.8.2-jdk-8-slim AS build
@@ -7,10 +7,7 @@ FROM maven:3.8.2-jdk-8-slim AS build
 ## Execute buildx to create multi platform builds
 
 ```
-docker buildx build \
---platform linux/amd64,linux/arm64 \
--t in28min/hello-world-python:0.0.1.RELEASE \
---push \
+docker buildx build --platform linux/amd64,linux/arm64 -t in28min/hello-world-python:docker buildx build --platform linux/amd64,linux/arm64 -t in28min/hello-world-python:0.0.1.RELEASE --push .\projects\hello-world\hello-world-pythondocker buildx build --platform linux/amd64,linux/arm64 -t in28min/hello-world-python:0.0.1.RELEASE --push .\projects\hello-world\hello-world-python0.0.1.RELEASE --push \
 .
 
 docker buildx build \
